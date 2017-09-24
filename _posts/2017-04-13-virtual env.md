@@ -1,5 +1,4 @@
 ---
-layout: post
 desc: Let's talk about a must have tool in every python devoloper's toolkit, virtualenv.
 title: virtualenv
 topic: crypto
@@ -22,7 +21,7 @@ When we import a package, python interpreter searches a list of directories unde
 
     >>> import sys
     >>> sys.path
-    ['', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', 
+['','/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip', 
     '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7', 
     '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', 
     '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', 
