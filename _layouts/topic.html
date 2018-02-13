@@ -1,21 +1,17 @@
 ---
 layout: page
-title: Blog
-subtitle: Stuffs I write about
-desc: Stuffs I write about
-=======
-title: Posts
-subtitle: Stuffx I write about
-desc: Stuffz I write about
 ---
-{% if paginator.page == 1 %}
-  {% for post in site.posts limit: 2 %}
+
+{% for post in site.posts limit: 2 %}
+	 {% if post.topic == page.topic %}
 <link rel="prerender" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+	  {% endif %}
   {% endfor %}
-{% endif %}
+
 
 <ul class="post-list">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
+	 {% if post.topic == page.topic %}	
   <li class="post">
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
       <h4 class="post-title">{{ post.title }}</h4>
@@ -34,6 +30,8 @@ desc: Stuffz I write about
       <p class="post-desc">{% if post.desc %}{{ post.desc }}{% else %}{{ post.excerpt }}{% endif %}</p>
     </a>
   </li>
+ {% endif %}
+
   {% endfor %}
 </ul>
 <!-- post-list -->
